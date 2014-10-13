@@ -1,3 +1,6 @@
+### Status
+[![Build Status](https://travis-ci.org/xchang/beans.svg?branch=master)](https://travis-ci.org/xchang/beans)
+
 beans
 =====
 
