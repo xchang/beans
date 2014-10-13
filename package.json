@@ -14,5 +14,12 @@
     "debug": "~2.0.0",
     "jade": "~1.6.0",
     "stylus": "0.42.3"
+  },
+  "devDependencies": {
+    "mocha": "1.21.x",
+    "supertest": "0.14.x"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }
