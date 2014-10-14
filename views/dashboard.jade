@@ -12,8 +12,21 @@ block content
       .collapse.navbar-collapse
         ul.nav.navbar-nav
           li
-            a(href='/dashboard') Welcome
+            a(href='/#') Welcome
         ul.nav.navbar-nav.navbar-right
           li
             button.btn.btn-default.navbar-btn.navbar-right 
-              a(href='/signin') Sign in
+              a(href='/#') Profile
+  .jumbotron
+    .container
+      h1 Welcome to beans
+      p (some intro text should goes here...)
+      p
+        a.btn.btn-primary.btn-lg(role="button") Add a project
+//
+  .container-fluid
+    .row
+      .col-md-9(role="main")
+        p Welcome to beans :)
+      .col-md-3(role="complementary")
+        button.btn.btn-primary Add Project

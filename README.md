@@ -16,6 +16,6 @@ beans
 [express.js](http://expressjs.com/),
 [mongoDB Driver](http://mongodb.github.io/node-mongodb-native/)
 
-####测试工具(?)
+####测试工具
 [mocha](http://visionmedia.github.io/mocha)
 [supertest](https://github.com/visionmedia/supertest)
