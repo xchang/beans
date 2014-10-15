@@ -1,5 +1,6 @@
 .bn-content {
   margin-top: 51px;
+  min-height: 400px;
 }
 .bn-content .bn-projects-section {
   margin-top: 10px;

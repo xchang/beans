@@ -14,8 +14,13 @@ beans
 
 [npm](https://www.npmjs.org/),
 [express.js](http://expressjs.com/),
+[jade](http://jade-lang.com/),
 [mongoDB Driver](http://mongodb.github.io/node-mongodb-native/)
 
 ####测试工具
-[mocha](http://visionmedia.github.io/mocha)
+[mocha](http://visionmedia.github.io/mocha),
 [supertest](https://github.com/visionmedia/supertest)
+
+####部署
+[heroku](http://heroku.com/)
+[travis-ci](https://travis-ci.org/)

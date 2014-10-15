@@ -21,8 +21,11 @@ block content
     .row
       .col-md-9(role="main")
         section.bn-projects-section
-          p
-            #{JSON.stringify(projects)}
+          .row
+            each proj in projects
+              .col-md-3
+                a.thumbnail(href="/projects/#{proj._id}")
+                  p= proj.name
       .col-md-3(role="complementary")
         section.bn-util-section
           a.btn.btn-primary.btn-lg(role="button", data-toggle="modal" data-target="#newProject") Create a project
