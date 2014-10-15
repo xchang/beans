@@ -24,6 +24,8 @@ block content
       p Starting by 
       p
         a.btn.btn-primary.btn-lg(role="button", data-toggle="modal" data-target="#newProject") Create a project
+      p 
+        #{JSON.stringify(projects)}
   .modal.bs-example-modal-sm(id="newProject")
     .modal-dialog
       .modal-content
