@@ -17,15 +17,15 @@ block content
           li
             button.btn.btn-default.navbar-btn.navbar-right 
               a(href='/') Profile
-  .jumbotron
-    .container
-      h1 Welcome to beans
-      p (some intro text should goes here...)
-      p Starting by 
-      p
-        a.btn.btn-primary.btn-lg(role="button", data-toggle="modal" data-target="#newProject") Create a project
-      p 
-        #{JSON.stringify(projects)}
+  .container.bn-content
+    .row
+      .col-md-9(role="main")
+        section.bn-projects-section
+          p
+            #{JSON.stringify(projects)}
+      .col-md-3(role="complementary")
+        section.bn-util-section
+          a.btn.btn-primary.btn-lg(role="button", data-toggle="modal" data-target="#newProject") Create a project
   .modal.bs-example-modal-sm(id="newProject")
     .modal-dialog
       .modal-content
@@ -35,3 +35,5 @@ block content
               input.form-control(type='text', name="projectName", placeholder="Project Name")
             button.btn.btn-default(type="button", data-dismiss="modal") Cancel
             button.btn.btn-primary(type='submit') Create
+
+  link(rel="stylesheet", href="/stylesheets/dashboard.css",  type="text/css" )
