@@ -21,12 +21,15 @@ block content
     .container
       h1 Welcome to beans
       p (some intro text should goes here...)
+      p Starting by 
       p
-        a.btn.btn-primary.btn-lg(role="button") Add a project
-//
-  .container-fluid
-    .row
-      .col-md-9(role="main")
-        p Welcome to beans :)
-      .col-md-3(role="complementary")
-        button.btn.btn-primary Add Project
+        a.btn.btn-primary.btn-lg(role="button", data-toggle="modal" data-target="#newProject") Create a project
+  .modal.bs-example-modal-sm(id="newProject")
+    .modal-dialog
+      .modal-content
+        .modal-body
+          form(action="/projects" method="post")
+            .form-group
+              input.form-control(type='text', name="projectName", placeholder="Project Name")
+            button.btn.btn-default(type="button", data-dismiss="modal") Cancel
+            button.btn.btn-primary(type='submit') Create
