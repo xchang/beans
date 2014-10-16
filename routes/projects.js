@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var app = express();
 
 var createProject = function(projectName, db, callback) {
   var collection = db.collection('projects');
@@ -9,7 +10,7 @@ var createProject = function(projectName, db, callback) {
 }
 
 router.post('/', function(req, res){
-  var url = 'mongodb://localhost:27017/beans_dev';
+  var url = req.app.get('DB_URL');
   var mongoClient = require('mongodb').MongoClient;
 
   mongoClient.connect(url, function(err, db) {

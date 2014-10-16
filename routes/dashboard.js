@@ -5,13 +5,13 @@ var fetchProjects = function(db, callback) {
   var collection = db.collection('projects');
   collection.find({}).toArray(function(err, docs) {
     console.log("Found the following records");
-    console.dir(docs)
+    console.dir(docs);
     callback(docs);
   });
 }
 
 router.get('/', function(req, res) {
-  var url = 'mongodb://localhost:27017/beans_dev';
+  var url = res.app.get('DB_URL');
   var mongoClient = require('mongodb').MongoClient;
 
   mongoClient.connect(url, function(err, db) {

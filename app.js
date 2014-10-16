@@ -32,6 +32,15 @@ app.use('/signin', signin);
 app.use('/dashboard', dashboard);
 app.use('/projects', projects);
 
+// development only
+if (app.get('env') === 'development') {
+  app.set('DB_URL', 'mongodb://localhost:27017/beans_dev');
+}
+
+if (app.get('env') === 'staging') {
+  app.set('DB_URL', process.env.MONGOHQ_URL);
+}
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

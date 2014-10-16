@@ -11,7 +11,6 @@ beans
 [Node School](http://nodeschool.io/)
 
 ####开发工具
-
 [npm](https://www.npmjs.org/),
 [express.js](http://expressjs.com/),
 [jade](http://jade-lang.com/),
@@ -22,5 +21,5 @@ beans
 [supertest](https://github.com/visionmedia/supertest)
 
 ####部署
-[heroku](http://heroku.com/)
+[heroku](http://heroku.com/),
 [travis-ci](https://travis-ci.org/)
