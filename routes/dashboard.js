@@ -13,7 +13,7 @@ var fetchProjects = function(db, callback) {
 router.get('/', function(req, res) {
   var url = res.app.get('DB_URL');
   var mongoClient = require('mongodb').MongoClient;
-
+  
   mongoClient.connect(url, function(err, db) {
     console.log("Connected correctly to server");
 

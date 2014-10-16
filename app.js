@@ -41,6 +41,8 @@ if (app.get('env') === 'staging') {
   app.set('DB_URL', process.env.MONGOHQ_URL);
 }
 
+console.log("Connect URL is " + app.get('DB_URL'));
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
