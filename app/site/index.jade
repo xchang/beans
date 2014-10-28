@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  header.navbar.navbar-default.navbar-fixed-top
+    .container
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='/') beans
+      .collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li
+            a(href='/dashboard') Welcome
+        ul.nav.navbar-nav.navbar-right
+          li
+            button.btn.btn-default.navbar-btn.navbar-right 
+              a(href='/signin') Sign in
+  main(role="main")
+    .jumbotron
+      .container
+        h1 Welcome to beans
+        p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

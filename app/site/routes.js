@@ -10,7 +10,16 @@ var fetchProjects = function(db, callback) {
   });
 }
 
+/* GET home page. */
 router.get('/', function(req, res) {
+  res.render('site/index', { title: 'beans' });
+});
+
+router.get('/signin', function(req, res) {
+  res.render('site/signin');
+});
+
+router.get('/dashboard', function(req, res) {
   var url = res.app.get('DB_URL');
   var mongoClient = require('mongodb').MongoClient;
   
@@ -18,7 +27,7 @@ router.get('/', function(req, res) {
     console.log("Connected correctly to server");
 
     fetchProjects(db, function(projects){
-      res.render('dashboard', {projects: projects});
+      res.render('site/dashboard', {projects: projects});
       db.close();
     });
   });

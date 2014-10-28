@@ -5,17 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var signin = require('./routes/signin');
-var dashboard = require('./routes/dashboard');
-var projects = require('./routes/projects');
+var site = require('./site/routes');
+var projects = require('./projects/routes');
 
 
 var app = express();
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
-app.set('views', __dirname + '/views');
+app.set('views', __dirname);
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
@@ -27,9 +25,7 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
-app.use('/signin', signin);
-app.use('/dashboard', dashboard);
+app.use('/', site);
 app.use('/projects', projects);
 
 // development only
@@ -56,8 +52,9 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
+        console.log(err.message);
         res.status(err.status || 500);
-        res.render('error', {
+        res.render('errors/error', {
             message: err.message,
             error: err
         });
@@ -68,7 +65,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.render('errors/error', {
         message: err.message,
         error: {}
     });
